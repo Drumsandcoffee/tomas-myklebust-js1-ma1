@@ -81,16 +81,13 @@ let html = "";
 function createCats(cats){
 
     for( let i = 0; i < cats.length; i++){
-        
-      
-
-
+        if(cats[i].age == null){
+            cats[i].age = "Age Unknown"
+        }      
     html += `<div>
                 <h5>${cats[i].name}</h5>
                 <p>${cats[i].age}</p>
-             </div>`
-
-  
+             </div>`  
 }}
 createCats(cats)
 
